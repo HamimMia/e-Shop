@@ -1,0 +1,165 @@
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin:0;
+    padding: 0;
+    padding-left: 9% !important;
+    background-color: #ffffff;
+}
+
+/*#logo {*/
+    /*display: block;*/
+    /*padding: 0 30px;*/
+    /*float: left;*/
+    /*font-size:20px;*/
+    /*line-height: 60px;*/
+/*}*/
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    float: left;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0;
+    display:inline-block;
+    float: left;
+    background-color: #ffffff;
+    line-height: 3;
+}
+
+/* Styling the links */
+nav a {
+    display:block;
+    padding:14px 20px;
+    color:#000000;
+    font-size:12pt;
+    text-decoration:none;
+}
+nav a:active {
+    color: #ffffff;
+    background-color: #4fbfa8;
+}
+nav a:focus {
+    color: #ffffff;
+    background-color: #4fbfa8;
+    text-decoration:none;
+}
+
+nav ul li ul li:hover {
+    background-color: #4fbfa8;
+    text-decoration:none;
+    color: #ffffff;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+    color: #ffffff;
+    background-color: #4fbfa8;
+    text-decoration:none;
+}
+.search{
+    width: 57.5%;
+    padding-bottom: 5px;
+}
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 928px) {
+
+    nav {
+        margin: 0;
+        padding: 0 !important;
+
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        text-align: center;
+        display: block;
+        background-color: #348e7b;
+        padding: 10px;
+        margin: 0;
+        color:#FFF;
+        font-size:17px;
+        text-decoration:none;
+        border:none;
+    }
+
+    .toggle:hover {
+        background-color: #4fbfa8;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        text-align: center;
+        display: block;
+        width: 100%;
+        line-height: 1;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #4fbfa8;
+    }
+
+    .navbar-btn{
+        float: right;
+        margin-top: 3%;
+        margin-right: 0% !important;
+        margin-bottom: -20px !important;
+    }
+
+    .sub-nav{
+        margin-top: 60px;
+    }
+
+    .search{
+        width: 50.5%;
+        margin-left: 5%;
+
+    }
+
+
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display:block;
+        width: 100%;
+    }
+
+}
